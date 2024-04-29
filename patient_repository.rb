@@ -1,7 +1,7 @@
 require "csv"
 require_relative "patient"
 
-class PatientRepository
+class PatientsRepository
     def initialize(csv_filepath)
         @csv_filepath = csv_filepath
         @patients     = []
@@ -49,7 +49,6 @@ class PatientRepository
         end
 
         # increment the next used id
-        # @next_id = @patients.last.id + 1
 
         # if @patients.empty?
         #     @next_id = 1
@@ -61,9 +60,9 @@ class PatientRepository
     end
 end
 
-test_repo = PatientsRepository.new("patients.csv")
+# test_repo = PatientRepository.new("patients.csv")
 
-test_patient = Patient.new(name: "roel")
-test_repo.create(test_patient)
+# test_patient = Patient.new(name: "roel")
+# test_repo.create(test_patient)
 
-p test_repo.all
+# p test_repo.all
